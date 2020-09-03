@@ -14,10 +14,10 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const mapStateToProps = (state) => {
-  // return {
-  //   videos: state.videos,
-  //   curentVideo: state.ccurentVideo
-  // };
+  return {
+    videos: state.videos,
+    currentVideo: state.currentVideo
+  };
 };
 
 var SearchContainer = connect(mapStateToProps, mapDispatchToProps)(Search);

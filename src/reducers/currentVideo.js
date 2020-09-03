@@ -9,10 +9,7 @@ var currentVideoReducer = (state = initialState, action) => {
   // if action.type is CHANGE_VIDEO
   case 'CHANGE_VIDEO':
     // change current video to action.video
-    if (action.video === undefined) {
-      return null;
-    }
-    return action.video;
+    return action.video || null;
     // else
   default:
     // return state

@@ -10,7 +10,7 @@ const mapDispatchToProps = (dispatch) => ({
 const mapStateToProps = (state) => {
   return {
     videos: state.videoList,
-    curentVideo: state.currentVideo
+    currentVideo: state.currentVideo
   };
 };
 
