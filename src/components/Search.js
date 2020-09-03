@@ -1,12 +1,12 @@
 import React from 'react';
 
 
-const Search = (props) => (
+const Search = ({handleSearchInputChange}) => (
   <div className="search-bar form-inline">
     <input
       className="form-control"
       type="text"
-      onChange={(evt) => { props.handleSearchInputChange(evt.target.value); }}
+      onChange={(evt) => handleSearchInputChange(evt.target.value) }
     />
     <button className="btn hidden-sm-down">
       <span className="glyphicon glyphicon-search"></span>

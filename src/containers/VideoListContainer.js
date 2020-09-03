@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import VideoList from './../components/VideoList.js';
 import changeVideo from './../actions/currentVideo.js';
 
+// component VideoList expects {videos, handleVideoListEntryTitleClick} so pass into map fcns below
 const mapDispatchToProps = (dispatch) => ({
   // set handleSearch method
   handleVideoListEntryTitleClick: (videos) => dispatch(changeVideo(videos))
@@ -10,7 +11,6 @@ const mapDispatchToProps = (dispatch) => ({
 const mapStateToProps = (state) => {
   return {
     videos: state.videoList,
-    currentVideo: state.currentVideo
   };
 };
 

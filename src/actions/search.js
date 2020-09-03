@@ -17,8 +17,8 @@ var handleVideoSearch = (q) => {
     // return searchYoutube with options and CB passed in
     return searchYouTube(options, (data) => {
       // CB will dispatch currentVideo adn changeVideoList actions
-      dispatch(changeVideoList(data));
       dispatch(changeVideo(data[0]));
+      dispatch(changeVideoList(data));
     });
   };
 

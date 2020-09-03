@@ -5,6 +5,7 @@ import searchYouTube from './lib/searchYouTube.js';
 import YOUTUBE_API_KEY from './config/youtube.js';
 import { Provider } from 'react-redux';
 import configureStore from './store/store.js';
+import handleSearchChange from './actions/search.js';
 
 //TODO: Import the Provider component from 'react-redux' here!
 
@@ -15,5 +16,6 @@ ReactDOM.render(
   <Provider store={configureStore}>
     <App API_KEY={YOUTUBE_API_KEY} searchYouTube={searchYouTube} />
   </Provider>,
-  document.getElementById('app')
+  document.getElementById('app'),
+  () => handleSearchChange('Corgis')(configureStore.dispatch) // initial kickoff when loading first request
 );
