@@ -5,7 +5,7 @@ const Search = ({handleSearchInputChange}) => (
   <div className="search-bar form-inline">
     <input
       className="form-control"
-      type="text"
+      type="text" placeholder="Search"
       onChange={(evt) => handleSearchInputChange(evt.target.value) }
     />
     <button className="btn hidden-sm-down">
